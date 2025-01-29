@@ -34,8 +34,8 @@ class Truck extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[],
-    towingCapacity: number
+    towingCapacity: number,
+    wheels: Wheel[] //order was wrong throwing an error in my CLI RESOLVED
   ) {
 
     super();
