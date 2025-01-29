@@ -11,22 +11,33 @@ import AbleToTow from '../interfaces/AbleToTow.js';
 // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
 
 class Truck extends Vehicle {
-  vin;
-  color;
-  make;
-  model;
-  year;
-  weight;
-  topSpeed;
-  wheels;
-  towingCapacity;
+  vin: string;
+  color: string;
+  make: string;
+  model: string;
+  year: number;
+  weight: number;
+  topSpeed: number;
+  wheels: Wheel[];
+  towingCapacity: number;
 
   // TODO: Create a constructor that accepts the properties of the Truck class
   // TODO: The constructor should call the constructor of the parent class, Vehicle
   // TODO: The constructor should initialize the properties of the Truck class
   // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
 
-  constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, towingCapacity: number, wheels: Wheel[] = []) {
+  constructor(
+    vin: string,
+    color: string,
+    make: string,
+    model: string,
+    year: number,
+    weight: number,
+    topSpeed: number,
+    wheels: Wheel[],
+    towingCapacity: number
+  ) {
+
     super();
 
     this.vin = vin;
@@ -60,7 +71,7 @@ class Truck extends Vehicle {
   // TODO: The method should log the details of the Truck
   // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
 
-  override printDetails() {
+  override printDetails(): void {
     super.printDetails();
     console.log(`VIN: ${this.vin}`);
     console.log(`Make: ${this.make}`);
